@@ -12,6 +12,7 @@ var app_component_1 = require("./app.component");
 var product_list_component_1 = require("./products/product-list.component");
 var forms_1 = require("@angular/forms");
 var convert_to_spaces_pipe_1 = require("./shared/convert-to-spaces.pipe");
+var star_component_1 = require("./shared/star.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -23,7 +24,8 @@ AppModule = __decorate([
         declarations: [
             app_component_1.AppComponent,
             product_list_component_1.ProductListComponent,
-            convert_to_spaces_pipe_1.ConvertToSpacesPipe
+            convert_to_spaces_pipe_1.ConvertToSpacesPipe,
+            star_component_1.StarComponent
         ],
         bootstrap: [app_component_1.AppComponent]
     })
