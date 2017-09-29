@@ -96,6 +96,9 @@ var ProductListComponent = (function () {
             return product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1;
         });
     };
+    ProductListComponent.prototype.onRatingClick = function (message) {
+        this.pageTitle = 'Product List: ' + message;
+    };
     return ProductListComponent;
 }());
 ProductListComponent = __decorate([
