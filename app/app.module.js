@@ -11,8 +11,10 @@ var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
 var product_list_component_1 = require("./products/product-list.component");
 var forms_1 = require("@angular/forms");
+var http_1 = require("@angular/common/http");
 var convert_to_spaces_pipe_1 = require("./shared/convert-to-spaces.pipe");
 var star_component_1 = require("./shared/star.component");
+var product_service_1 = require("./products/product.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -20,14 +22,21 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
+        imports: [
+            platform_browser_1.BrowserModule,
+            forms_1.FormsModule,
+            http_1.HttpClientModule
+        ],
         declarations: [
             app_component_1.AppComponent,
             product_list_component_1.ProductListComponent,
             convert_to_spaces_pipe_1.ConvertToSpacesPipe,
             star_component_1.StarComponent
         ],
-        bootstrap: [app_component_1.AppComponent]
+        bootstrap: [app_component_1.AppComponent],
+        providers: [
+            product_service_1.ProductService
+        ]
     })
 ], AppModule);
 exports.AppModule = AppModule;
