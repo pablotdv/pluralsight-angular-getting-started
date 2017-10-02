@@ -4,7 +4,6 @@ import { ProductService } from "./product.service";
 
 
 @Component({
-    selector: 'pm-products',
     templateUrl: './product-list.component.html',
     styleUrls: ['./product-list.component.css']
 })
@@ -38,12 +37,10 @@ export class ProductListComponent implements OnInit {
 
     ngOnInit(): void {
         this._productService.getProducts()
-            .subscribe(
-            products => {
+            .subscribe(products => {
                 this.products = products;
                 this.filteredProducts = this.products;
-            },
-                error => this.errorMessage = <any>error);
+            }, error => this.errorMessage = <any>error);
 
     }
 
